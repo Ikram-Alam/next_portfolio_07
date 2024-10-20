@@ -1,0 +1,125 @@
+/* General styling for the About section */
+.aboutSection {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Section heading */
+  .heading {
+    font-size: 2.5rem;
+    color: #1a1a2e;
+    margin-bottom: 40px;
+    margin-top: 45px;
+    text-align: center;
+    position: relative;
+    animation: fadeInDown 1.5s ease-in-out;
+  }
+  
+  .aboutContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  /* Text Section */
+  .textSection {
+    max-width: 600px;
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .highlight {
+    color: #e94560;
+    font-weight: bold;
+  }
+  
+  .textSection p {
+    margin-bottom: 20px;
+  }
+  
+  /* Skills Section */
+  .skillsSection {
+    max-width: 500px;
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeInRight 2s ease-in-out;
+  }
+  
+  .skillsSection h3 {
+    font-size: 1.8rem;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+  }
+  
+  .skillsList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .skillsList li {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .skillsList li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.5rem;
+    color: #e94560;
+  }
+  
+  /* Keyframe animations */
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInRight {
+    0% { opacity: 0; transform: translateX(20px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .aboutContent {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .textSection {
+      max-width: 100%;
+    }
+  
+    .skillsSection {
+      max-width: 100%;
+      margin-top: 20px;
+    }
+  }
+  

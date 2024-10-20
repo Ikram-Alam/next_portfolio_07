@@ -1,0 +1,99 @@
+/* Footer general styling */
+.footer {
+    background-color: #1a1a2e;
+    color: #fff;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .logo a {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .logo a:hover {
+    color: #e94560;
+  }
+  
+  /* Navigation Links */
+  .navLinks {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .navLinks li a {
+    color: #ffffff;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .navLinks li a:hover {
+    color: #e94560;
+  }
+  
+  /* Social Icons */
+  .socialIcons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .icon {
+    color: #ffffff;
+    font-size: 24px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .icon:hover {
+    color: #e94560;
+    transform: scale(1.2);
+  }
+  
+  /* Copyright */
+  .copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .navLinks {
+      justify-content: center;
+      margin-top: 20px;
+    }
+  
+    .socialIcons {
+      justify-content: center;
+      margin-top: 20px;
+    }
+  }
+  

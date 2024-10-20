@@ -1,0 +1,105 @@
+/* General styling for the Service section */
+.serviceSection {
+    background-color: #ffffff;
+    padding: 80px 20px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Section Heading */
+  .heading {
+    font-size: 2.5rem;
+    color: #1a1a2e;
+    margin-bottom: 50px;
+    position: relative;
+    animation: fadeInDown 1.5s ease-in-out;
+  }
+  
+  /* Grid layout for service cards */
+  .serviceGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    justify-items: center;
+  }
+  
+  /* Service card styling */
+  .serviceCard {
+    background-color: #f1f1f1;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    animation: fadeInUp 1.5s ease-in-out;
+  }
+  
+  .serviceCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #e94560;
+    animation: bounce 2s infinite ease-in-out;
+  }
+  
+  .serviceCard h3 {
+    font-size: 1.5rem;
+    color: #1a1a2e;
+    margin-bottom: 15px;
+  }
+  
+  .serviceCard p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  /* Keyframe animations */
+  @keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  /* Responsive layout */
+  @media (max-width: 768px) {
+    .serviceCard {
+      padding: 30px 15px;
+    }
+  
+    .icon {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .heading {
+      font-size: 2rem;
+    }
+  
+    .serviceCard h3 {
+      font-size: 1.2rem;
+    }
+  }
+  

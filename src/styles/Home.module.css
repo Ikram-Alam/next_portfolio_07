@@ -1,0 +1,122 @@
+/* General styling for the home page */
+.homeContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f4f6;
+  }
+  
+  /* Hero Section */
+  .hero {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .heroText {
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .heroText h1 {
+    font-size: 3.5rem;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  
+  .highlight {
+    color: #e94560;
+    font-weight: bold;
+  }
+  
+  .heroText p {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  
+  /* Call-to-action Buttons */
+  .ctaButtons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .cta, .ctaOutline {
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .cta {
+    background-color: #e94560;
+    color: white;
+    border: none;
+  }
+  
+  .cta:hover {
+    background-color: #f57385;
+  }
+  
+  .ctaOutline {
+    background-color: transparent;
+    color: #e94560;
+    border: 2px solid #e94560;
+  }
+  
+  .ctaOutline:hover {
+    background-color: #e94560;
+    color: white;
+  }
+  
+  /* Hero Image */
+  .heroImage {
+    max-width: 500px;
+  }
+  
+  .heroImage img {
+    width: 100%;
+    height: auto;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  /* Keyframe animations */
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .heroText h1 {
+      font-size: 2.5rem;
+    }
+  
+    .heroImage {
+      margin-top: 20px;
+    }
+  }
+  

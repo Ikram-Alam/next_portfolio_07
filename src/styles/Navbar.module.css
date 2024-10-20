@@ -1,0 +1,130 @@
+/* General Navbar Styling */
+.navbar {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a2e;
+  padding: 0 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #e94560;
+}
+
+/* Navigation Links */
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+.navLinks li a {
+  color: #ffffff;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effect */
+.navLinks li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background: #e94560;
+  bottom: -4px;
+  left: 0;
+  transition: 0.3s;
+}
+
+.navLinks li a:hover::after {
+  width: 100%;
+}
+
+.navLinks li a:hover {
+  color: #e94560;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1500;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  transition: 0.4s;
+}
+
+.menuToggle {
+  display: none;
+}
+
+/* When the checkbox is checked, change the appearance of the hamburger icon */
+.menuToggle:checked + .hamburger div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menuToggle:checked + .hamburger div:nth-child(2) {
+  opacity: 0;
+}
+
+.menuToggle:checked + .hamburger div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive Menu for Mobile View */
+@media (max-width: 768px) {
+  .navLinks {
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    background-color: #1a1a2e;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+  }
+
+  .menuToggle:checked ~ .navLinks {
+    left: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navLinks li {
+    margin: 20px 0;
+  }
+
+  .navLinks li a {
+    font-size: 24px;
+  }
+}

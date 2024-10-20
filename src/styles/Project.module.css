@@ -1,0 +1,121 @@
+/* General styling for the project section */
+.projectSection {
+    background-color: #f5f5f5;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Section Heading */
+  .heading {
+    font-size: 2.5rem;
+    color: #1a1a2e;
+    margin-bottom: 50px;
+    position: relative;
+    animation: fadeInDown 1.5s ease-in-out;
+  }
+  
+  /* Grid layout for project cards */
+  .projectGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    justify-items: center;
+  }
+  
+  /* Project card styling */
+  .projectCard {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    max-width: 100%;
+    position: relative;
+    animation: fadeInUp 1.5s ease-in-out;
+  }
+  
+  .projectCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Project image styling */
+  .projectImage, .projectVideo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .projectCard:hover .projectImage, 
+  .projectCard:hover .projectVideo {
+    transform: scale(1.05);
+  }
+  
+  /* Project info section */
+  .projectInfo {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .projectInfo h3 {
+    font-size: 1.5rem;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+  }
+  
+  .projectInfo p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .projectLink {
+    display: inline-block;
+    background-color: #e94560;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .projectLink:hover {
+    background-color: #1a1a2e;
+    color: #fff;
+  }
+  
+  /* Keyframe animations */
+  @keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive layout */
+  @media (max-width: 768px) {
+    .projectCard {
+      padding: 15px;
+    }
+  
+    .projectInfo h3 {
+      font-size: 1.2rem;
+    }
+  
+    .projectLink {
+      padding: 8px 15px;
+    }
+  }
+  
